@@ -3,7 +3,7 @@
 int main() {
     std::cout << "\n===== Const =====\n";
     // const variable: value cannot be changed after initialization
-    int a = 10; 
+    int a = 10;
     const int b = a;
     const int &c = a;
     const int &d = b;
@@ -38,7 +38,7 @@ int main() {
     std::cout << "const int y: " << y << std::endl; // Outputs: 30
     std::cout << "const int ref z: " << z << std::endl; // Outputs: 30
     x = 40; // x can be changed
-    std::cout << "After changing x to 40:\n";       
+    std::cout << "After changing x to 40:\n";
     std::cout << "int x: " << x << std::endl; // Outputs: 40
     std::cout << "const int y: " << y << std::endl; // Outputs: 30
     std::cout << "const int ref z: " << z << std::endl; // Outputs: 40
@@ -51,6 +51,10 @@ int main() {
     std::cout << "const T *b = r; b is low-level const\n";
     std::cout << "const T &c= r; reference always low-level\n";
     std::cout << "=================\n\n";
+
+    int t = 0;
+    int *ptr = &t;
+    const int *ptr1 = ptr;
 
     return 0;
 }
